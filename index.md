@@ -4,9 +4,9 @@
 Below are links to the weekly write ups required for this class.  As they are completed and due new links will be posted.
 
 
-### Header 3
+### Table of Contents
 
 - <a href="https://croomosu.github.io/week1">Week 1</a>
-- List
+
 
 
