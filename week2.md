@@ -15,7 +15,43 @@ Interacting with a live system can be delicate as we do not want to lose power. 
 ![Volatility List](/images/volList.png)
 
 ### Tools and Labs
-Throughout the lectures the labs consisted of demonstrations of new tools and what they are able to do.  Following along I was able to replicate what was demonstrated
+Throughout the lectures the labs consisted of demonstrations of new tools and what they are able to do.  Following along I was able to replicate what was demonstrated.  
+**FTK Imager**
+This tool is very useful for creating and analyzing images of a drive or disk.  Using this tool you can also investigate the contents of the data.  In the image below you can see that I was able to recreate the process from the Lab to load my current disk and examine files.  I did not create a new image of the disk for this exercise.
+![FTK Imager](/images/ftk.png)
+
+**Volatility **
+Following along with the lectures for this lab I was able to demonstrate how I was able to extract information from a memory dump using the volatility tool.  The images below are me working through the lab to identify the different data contained in the memory dump.
+![Volatility 1](/images/vol1.png)
+
+![Volatility 2](/images/vol2.png)
+![Volatility 3](/images/vol3.png)
+![Volatility 4](/images/vol4.png)
+Volatility has many different plugins that can be used to investigate the data.  One example is timeliner.  This can create a timeline view of the processes captured in the memory dump.
+
+**Yara**
+Yara was mentioned briefly in the lectures and can be used in conjunction with volatility.  It has rules and signatures associated with malware that can be used to identify infection of a suspect system.
+
+**Recovering Data with OSFMount and PhotoRec**
+OSFMount allows us to mount an image so that it is then accessible to the file system.  From here we can run photorec on the image to restore deleted files.  Below is an image that contains the recovered files, command line window for using photorec and the mounting of the disk.
+![Carving Data](/images/carve.png)
+
+**Challenge**
+The last part of this series of lectures was a challenge to extract data out of an image of a usb stick.  Here we are looking for targets, malware, username/passwords, and deleted files.  From the results discovered we are asked on how we would advise the targets.  I took the hints provided by the lecture and got to work dissecting the image.
+First I mounted the file:
+![Challenge 1](/images/challenge1.png)
+From here I was able to see the files on the image.
+![Challenge 2](/images/challenge2.png)
+I recovered data from the image that was deleted.
+![Challenge 3](/images/challenge3.png)
+Based off of the hints I investigated the files on the image with file insite and found a password using the strings function.
+![Challenge 4](/images/challenge4.png)
+Applying this password to the zipped file I was able to determine the targets in the csv
+![Challenge 5](/images/challenge5.png)
+Looking at the other files present it appears to be a root kit intended for the target.
+
+I would contact the targets and advise them that their systems may be compromised from this attack.
+
 
 ### References
 The information above was obtained from the following asset.
