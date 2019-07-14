@@ -16,7 +16,7 @@ Local Execution refers to how the malicious software gets executed on the target
 Generally, malware will either try to hide itself like in a bootkit or rootkit, or blend in.  To blend in malware can change its file name to be more like the operating system (svchest as we saw in previous weeks), have a valid signature, or modify file properties.  
 Malware must also persist in the system.  After a reboot the malware needs to become active again.  There are several locations throughout windows where this can happen.  This persistence could be representative in a file, but also hidden in places that are generally not targeted by file threat detection systems.  One example would be a script located in the registry.  In the image below we can see the various places that malware can persist.
 
-![Persistence](/images/persist.png)
+![Persistence](/images/persist.PNG)
 
 4. Malicious Activity
 The activity itself is anything that the malware uses to manipulate the target.  This would be data gathering, ransomware, or any other method of disruption to the target.
@@ -24,7 +24,7 @@ The activity itself is anything that the malware uses to manipulate the target. 
 #### Defenses
 The defense against malware is multi layered.  If we can prevent malware at the various levels attack vectors we will have better coverage and make it less likely that malware can take hold of the system.  The image below shows the layers as well as technologies associated to the layers.
 
-![Defense layers](/images/layers.png)
+![Defense layers](/images/layers.PNG)
 
 The lecturer listed several methods of defense that are used within the layers to defend against malware.  While there was a lot of McAfee specific names thrown around there was a good generic list provided of the types of features anti-malware would contain:
 
@@ -35,11 +35,11 @@ Yara is a language that allows for pattern matching with specific rules.  This i
 #### Lab 1
 The purpose of this lab was to get us used to using yara rules.  We were given a sample folder that had some potential malware in it.  I examined each file with fileinsight to try to find a common string(s).  Upon inspection I found that the following was the most promising:
 
-![packedV](/images/jampack.png)
+![packedV](/images/jampack.PNG)
 
 This appears to be a packed version of a longer string.  After further inspection of the remaining files I found a more robust string.
 
-![unpackedV](/images/jamunpack.png)
+![unpackedV](/images/jamunpack.PNG)
 
 Using the yara editor I was able to create a yara rule that will cover the files in the sample and not pull false positives off of the system files.
 
@@ -47,7 +47,7 @@ Using the yara editor I was able to create a yara rule that will cover the files
 
 ![yara2](/images/yara2.png)
 
-![ yaraSYSRun](/images/yaraSYSRun.png)
+![ yaraSYSRun](/images/yaraSYSRun.PNG)
 
 #### Lab 2
 This is a continuation of the previous lab.  Here we are to look at the other two sample groups and provide yara rules for these as well.
