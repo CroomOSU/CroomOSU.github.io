@@ -1,7 +1,7 @@
 ## Eric Croom’s CS 373 Weekly Write Ups
 
 ## Week 3 Write Up
-	Week 3 is our introduction to Malware Defense.  The series of lectures details some of the modus operandi of the malware methods of defense.  This week a hands-on discussion was held for the tools introduced.  Yara was explained and Cuckoo was also introduced.  Labs to show usage of these tools were also accomplished.  I was able to follow along with these labs and have documented that below.
+Week 3 is our introduction to Malware Defense.  The series of lectures details some of the modus operandi of the malware methods of defense.  This week a hands-on discussion was held for the tools introduced.  Yara was explained and Cuckoo was also introduced.  Labs to show usage of these tools were also accomplished.  I was able to follow along with these labs and have documented that below.
 
 ### Malware Defense
 To be able to defend against malware we must understand the methods by which it will attack a user.  The presenter demonstrated this with an attack graph (displayed below) and walked through the descriptions of the four sections within the graph.
