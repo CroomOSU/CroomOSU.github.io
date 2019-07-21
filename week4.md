@@ -18,7 +18,7 @@ Some of concepts covered were:
 -	Address displays information about the target provided
 Below is a screen shot of a formatted register to get the return value of the function.
 
-![Format Register](/images/register.png)
+![Format Register](/images/register.PNG)
 
 #### Part 2
 The next section of the lab has us going over how to investigate the stack and track what the attack is doing.  By setting break points at functions we are able to step into the code and evaluate the registers for the data contained within.  
