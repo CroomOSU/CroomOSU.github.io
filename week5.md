@@ -8,15 +8,15 @@ Rootkits take control of a target system and are stealthily hidden.  Rootkits li
 In this lab we are directed to use cuckoo or other tools to examine a file called Agony.  As this was meant to hide itself, we are tasked with discovering what information it left behind.
 Running Cuckoo I found 3 files as shown in the image below.  Also using Tuluka I was able to identify a file I cannot see, wininit.sys.
 
-![agony1](//images/agony1.png)
+![agony1](/images/agony1.png)
 
 Additionally, we were tasked to investigate the three hooked locations.  Setting breakpoints on the infected locations in memory I was able to step through the code execution to determine when the code returned back to the original process.  This is illustrated in the next three images.
 
-![agony2](//images/agony2.png)
+![agony2](/images/agony2.png)
 
-![agony3](//images/agony3.png)
+![agony3](/images/agony3.png)
 
-![agony4](//images/agony4.png)
+![agony4](/images/agony4.png)
 
 The results highlighted above represent the number of bytes for the sections of malware used to hook the data.  By understanding where and how big the infectious pieces are we can use this information to apply patches that bypass the malwares effects.  Though these patches may not remove the infection they can invalidate them by fixing the table that had the api pointers changed.
 
@@ -30,7 +30,7 @@ To combat this Microsoft created secure boot.  This ensures that each step in th
 ### Trends in Stealth Malware
 There are many methods for malware to use stealth.  The image below lists out several off the methods described this week.
 
-![stealth](//images/stealth.png)
+![stealth](/images/stealth.png)
 
 Stealth is what allows the rootkits to be successful and infect a system.  Without employing these avenues to avoid detection the purpose of the malware goes unfulfilled.  Security software needs to understand these methods and devise ways around the stealth to effectively highlight and disable these types of attacks.
 
