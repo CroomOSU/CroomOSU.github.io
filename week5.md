@@ -24,7 +24,7 @@ The results highlighted above represent the number of bytes for the sections of 
 This lab was a description of what our homework was for this week.  This will be posted to canvas.  This section also exposed us to a new tool, Process Hacker.  This is very similar to process explorer, but with the ability to view the modules, threads, and memory of the process.  Our goal is replicate some of this functionality.  Listing processes, modules, threads and memory are part of this challenge.  
 After some research I found several ways to do this in a few languages.  In python there is a module call psutils that can be used.  C# has a Process class that will do most of the work.  However, displaying the memory values does not seem to be as readily apparent in higher level languages.  I’m opting for a c++ implementation as there is documentation on different ways to do parts of this as well as c++ is better suited for this level of memory manipulation.
 
- ### Bootkits
+### Bootkits
 Bootkits are a type of malware that is loaded into boot process.  Bootkits can be rootkits if they attempt to hide themselves but they don’t have to do this.  In the boot process there are several steps involved that can have malware loaded.  This allows the bootkit to bypass or modify the os since it hasn’t been loaded yet.  
 To combat this Microsoft created secure boot.  This ensures that each step in the boot process is verified by way of digital signature.  This will prevent malware from being injected during the boot process.
 ### Trends in Stealth Malware
