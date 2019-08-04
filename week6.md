@@ -2,21 +2,26 @@
 
 ## Week 6 Write Up
 This week’s discussion was on network security and the threats and preventative measures associated with the network.  There were several small labs and take-home assignments discussed throughout the lectures.  The main ideas represented were detection, prevention, and the use of wireshark to analyze network traffic data.  There was some ambiguity on what was presented in the lectures and what needs to be completed as homework.  I will do my best in the discussion below to accommodate these recommendations/requirements.
-### Robustness Principle
+### Robustness Principle and Firewall
 The Robustness Principle simply states:
 “Be liberal in what you accept, and conservative in what you send” 
 In essence I do not agree with this principle.  This is the general interpretation that everyone on the internet is working in good faith.  This was later expanded to say:
-“assume that the network is filled with malevolent entities that will send in packets designed to have the worst possible effect" (From Wikipedia:  https://en.wikipedia.org/wiki/Robustness_principle )
+“assume that the network is filled with malevolent entities that will send in packets designed to have the worst possible effect" (From Wikipedia:  https://en.wikipedia.org/wiki/Robustness_principle)
 It is clear that being liberal in what is accepted can lead to malicious actors infiltrating systems and infecting their target systems.  Better precautions and proper updating to the implementation must be made to quarantine unexpected results rather than accept them without reservation.  The last part of the statement, however, still holds true.  Being conversation in what is sent and acting in the best faith towards the recipient will lead to better communication and cooperation between systems.
+
+The firewall was to fill in data to a spreadsheet about zone to zone policy ideas.  I worked through some of this, however, I was unable to complete all of the items.  There was insufficient description of how this is supposed to work and it appears that these answers would be entirely conditional to the network that they reside in.  It seems that this exercies is to just make up what we thing would be the best fit without any context.  Below represents a start to identifying what the rules would be.  However, without understanding the network itself and the business requirements for how the network should perform one can only guess as to the proper implementation.
+
+![zone](/images/zone.png)
+
 ### Network Protection Strategies
 Protecting the network is just as important as protecting the end systems.  If the vulnerabilities cannot pass through the network they cannot get to the hosts.  Implementing this strategy will allow for more robust defenses. The following is a list of strategies to help protect the network:
-•	Positive policy – this type of strategy allows for whitelisting or allowing only certain things to gain access to the network.  This ensures that only what is permissible (defined limit) to interact with the network and the downstream hosts.
-•	Firewalls / Security Zones – this is another type of policy that defines the zones are allowable to accessed or interacted with.  An example consists of allowing Intranet to be completely allowable between itself while restricting certain protocols between the internet and end user.  Or determining what protocols are acceptable between different types of data centers.
-•	Defense in Depth – this concept represents rings of security.  Each ring consists of a different level or type of security.  If malicious actors can get past one layer there is another layer in place for defense.  As it goes deeper it becomes more difficult for an attacker to reach their end goal in the system
-•	Intrusion Detection – this technique uses signatures of known attacks to catch and rectify attacks.  There is a downside to this in that zero-day attacks and false positives can bypass the system.  Zero-day attacks can be unavoidable as they are unknown, however, false positives can be due to alert fatigue or improper monitoring.
-•	Honeynets / Intrusion Deception – here the defense is to trick or divert attackers into an area that will not affect the system waste the time of the attacker on diversions.  This can be difficult to implement as it is time consuming with setup and configuration.
-•	Quarantine – this concept will move suspect or malicious intent into an area where they cannot do any harm.  Blacklisting or the identification of bad actors / behavior can be utilized to implement a quarantine.
-•	Reputation (also host-based) – this is similar to the concept of white / black listing.  This is a method of identifying the good and the bad in all forms identifiable which is then pushed to a central source (cloud hosting) for ingestion by the network for use in defense.
+- Positive policy – this type of strategy allows for whitelisting or allowing only certain things to gain access to the network.  This ensures that only what is permissible (defined limit) to interact with the network and the downstream hosts.
+- Firewalls / Security Zones – this is another type of policy that defines the zones are allowable to accessed or interacted with.  An example consists of allowing Intranet to be completely allowable between itself while restricting certain protocols between the internet and end user.  Or determining what protocols are acceptable between different types of data centers.
+- Defense in Depth – this concept represents rings of security.  Each ring consists of a different level or type of security.  If malicious actors can get past one layer there is another layer in place for defense.  As it goes deeper it becomes more difficult for an attacker to reach their end goal in the system
+- Intrusion Detection – this technique uses signatures of known attacks to catch and rectify attacks.  There is a downside to this in that zero-day attacks and false positives can bypass the system.  Zero-day attacks can be unavoidable as they are unknown, however, false positives can be due to alert fatigue or improper monitoring.
+- Honeynets / Intrusion Deception – here the defense is to trick or divert attackers into an area that will not affect the system waste the time of the attacker on diversions.  This can be difficult to implement as it is time consuming with setup and configuration.
+- Quarantine – this concept will move suspect or malicious intent into an area where they cannot do any harm.  Blacklisting or the identification of bad actors / behavior can be utilized to implement a quarantine.
+- Reputation (also host-based) – this is similar to the concept of white / black listing.  This is a method of identifying the good and the bad in all forms identifiable which is then pushed to a central source (cloud hosting) for ingestion by the network for use in defense.
 The following chart represents network security technologies by Detection, Products, and Protection Methods.
 
 ![nst](/images/nst.png)
