@@ -11,7 +11,7 @@ It is clear that being liberal in what is accepted can lead to malicious actors 
 
 The firewall was to fill in data to a spreadsheet about zone to zone policy ideas.  I worked through some of this, however, I was unable to complete all of the items.  There was insufficient description of how this is supposed to work and it appears that these answers would be entirely conditional to the network that they reside in.  It seems that this exercies is to just make up what we thing would be the best fit without any context.  Below represents a start to identifying what the rules would be.  However, without understanding the network itself and the business requirements for how the network should perform one can only guess as to the proper implementation.
 
-![zone](/images/zone.png)
+![zone](/images//zone.png)
 
 ### Network Protection Strategies
 Protecting the network is just as important as protecting the end systems.  If the vulnerabilities cannot pass through the network they cannot get to the hosts.  Implementing this strategy will allow for more robust defenses. The following is a list of strategies to help protect the network:
