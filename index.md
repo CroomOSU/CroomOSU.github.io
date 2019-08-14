@@ -14,4 +14,5 @@ Below are links to the weekly write ups required for this class.  As they are co
 - <a href="/week6">Week 6</a>
 - <a href="/hw3">Homework 3</a>
 - <a href="/week7">Week 7</a>
+- <a href="/week8">Week 8</a>
 - <a href="/finalProj">Final</a>
